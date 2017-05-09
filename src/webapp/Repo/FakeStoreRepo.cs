@@ -74,22 +74,22 @@ namespace mymusicstore.Repo
 
             this._albums = new Album[]
             {
-                new Album { Title = "The Best Of The Men At Work", Genre = genres["Pop"], Price = 8.99M, Artist = artists["Men At Work"] },
+                new Album { Title = "The Best Of The Men At Work", Genre = genres["Pop"], Price = 8.99M, Artist = artists["Men At Work"]},
                 new Album { Title = "...And Justice For All", Genre = genres["Metal"], Price = 8.99M, Artist = artists["Metallica"] },
                 new Album { Title = "עד גבול האור", Genre = genres["World"], Price = 8.99M, Artist = artists["אריק אינשטיין"] },
-                new Album { Title = "Black Light Syndrome", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Terry Bozzio, Tony Levin & Steve Stevens"] },
-                new Album { Title = "10,000 Days", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Tool"] },
-                new Album { Title = "11i", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["Supreme Beings of Leisure"] },
-                new Album { Title = "1960", Genre = genres["Indie"], Price = 8.99M, Artist = artists["Soul-Junk"] },
-                new Album { Title = "4x4=12 ", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["deadmau5"] },
-                new Album { Title = "A Copland Celebration, Vol. I", Genre = genres["Classical"], Price = 8.99M, Artist = artists["London Symphony Orchestra"] },
-                new Album { Title = "A Lively Mind", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["Paul Oakenfold"] },
-                new Album { Title = "A Matter of Life and Death", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Iron Maiden"] },
+                new Album { Title = "Black Light Syndrome", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Terry Bozzio, Tony Levin & Steve Stevens"]},
+                new Album { Title = "10,000 Days", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Tool"]},
+                new Album { Title = "11i", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["Supreme Beings of Leisure"]},
+                new Album { Title = "1960", Genre = genres["Indie"], Price = 8.99M, Artist = artists["Soul-Junk"]},
+                new Album { Title = "4x4=12 ", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["deadmau5"]},
+                new Album { Title = "A Copland Celebration, Vol. I", Genre = genres["Classical"], Price = 8.99M, Artist = artists["London Symphony Orchestra"]},
+                new Album { Title = "A Lively Mind", Genre = genres["Electronic"], Price = 8.99M, Artist = artists["Paul Oakenfold"]},
+                new Album { Title = "A Matter of Life and Death", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Iron Maiden"]},
                 new Album { Title = "A Real Dead One", Genre = genres["Metal"], Price = 8.99M, Artist = artists["Iron Maiden"] },
-                new Album { Title = "A Real Live One", Genre = genres["Metal"], Price = 8.99M, Artist = artists["Iron Maiden"] },
-                new Album { Title = "A Rush of Blood to the Head", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Coldplay"] },
-                new Album { Title = "A Soprano Inspired", Genre = genres["Classical"], Price = 8.99M, Artist = artists["Britten Sinfonia, Ivor Bolton & Lesley Garrett"] },
-                new Album { Title = "A Winter Symphony", Genre = genres["Classical"], Price = 8.99M, Artist = artists["Sarah Brightman"] },
+                new Album { Title = "A Real Live One", Genre = genres["Metal"], Price = 8.99M, Artist = artists["Iron Maiden"]},
+                new Album { Title = "A Rush of Blood to the Head", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Coldplay"]},
+                new Album { Title = "A Soprano Inspired", Genre = genres["Classical"], Price = 8.99M, Artist = artists["Britten Sinfonia, Ivor Bolton & Lesley Garrett"]},
+                new Album { Title = "A Winter Symphony", Genre = genres["Classical"], Price = 8.99M, Artist = artists["Sarah Brightman"]},
                 new Album { Title = "Abbey Road", Genre = genres["Rock"], Price = 8.99M, Artist = artists["The Beatles"] },
                 new Album { Title = "Ace Of Spades", Genre = genres["Metal"], Price = 8.99M, Artist = artists["Motörhead"] },
                 new Album { Title = "Achtung Baby", Genre = genres["Rock"], Price = 8.99M, Artist = artists["U2"] },
@@ -538,10 +538,13 @@ namespace mymusicstore.Repo
                 new Album { Title = "Zoso", Genre = genres["Rock"], Price = 8.99M, Artist = artists["Led Zeppelin"] },
             };
 
+            int i = 20;
             foreach (var album in this._albums)
             {
                 album.ArtistId = album.Artist.ArtistId;
                 album.GenreId = album.Genre.GenreId;
+                album.AlbumArtUrl = "https://unsplash.it/150/100/?image=" + i.ToString();
+                i++;
             }
         }
 
