@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace mymusicstore.Repo
 {
-    public class MusicStoreRepo : IMusicStoreRepo
+    public class FakeStoreRepo : IMusicStoreRepo
     {
         private Album[] _albums;
         private Artist[] _artists;
         private Genre[] _genres;
 
-        public MusicStoreRepo()
+        public FakeStoreRepo()
         {
             BootStrapData();
         }

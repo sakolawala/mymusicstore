@@ -36,7 +36,7 @@ namespace mymusicstore
             services.AddMvc();
 
             //Add repo
-            services.AddTransient<IMusicStoreRepo, MusicStoreRepo>();
+            services.AddTransient<IMusicStoreRepo, FakeStoreRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
